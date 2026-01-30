@@ -426,17 +426,7 @@ section {
 
 .service-item:hover {
     background: rgba(43, 111, 237, 0.02);
-}
-
-.service-icon-wrapper {
-    min-width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    background: rgba(43, 111, 237, 0.02);
-    border: 1px solid rgba(43, 111, 237, 0.2);
+    transform: translateY(-5px);
 }
 
 .service-icon-wrapper {
@@ -448,8 +438,13 @@ section {
     border-radius: 16px;
     background: rgba(43, 111, 237, 0.1);
     border: 1px solid rgba(43, 111, 237, 0.2);
-    /* REMOVE THIS LINE ↓ */
-    /* transition: all 0.3s var(--ease-smooth); */
+    transition: all 0.3s var(--ease-smooth);
+}
+
+.service-item:hover .service-icon-wrapper {
+    background: rgba(43, 111, 237, 0.15);
+    border-color: rgba(43, 111, 237, 0.3);
+    transform: scale(1.05) rotate(5deg);
 }
 
 .service-icon {
@@ -524,7 +519,7 @@ section {
 .feature-item:hover .feature-icon-wrapper {
     background: rgba(0, 217, 255, 0.15);
     border-color: rgba(0, 217, 255, 0.3);
-    transform: none;
+    transform: scale(1.05) rotate(-5deg);
 }
 
 .feature-icon {
