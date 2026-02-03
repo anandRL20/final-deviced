@@ -152,27 +152,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ==================== SERVICE/FEATURE ITEM HOVER TILT ====================
-document.querySelectorAll('.service-item, .feature-item').forEach(item => {
-    item.addEventListener('mousemove', function(e) {
-        const rect = this.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = ((y - centerY) / centerY) * 5; // Max 5 degrees
-        const rotateY = ((centerX - x) / centerX) * 5;
-        
-        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-    });
-    
-    item.addEventListener('mouseleave', function() {
-        this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-    });
-});
-
 // ==================== PARALLAX EFFECT ON SCROLL ====================
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
@@ -181,20 +160,6 @@ window.addEventListener('scroll', () => {
     parallaxElements.forEach((element, index) => {
         const speed = (index + 1) * 0.1;
         element.style.transform = `translateY(${scrolled * speed}px)`;
-    });
-});
-
-// ==================== ICON ROTATION ON HOVER ====================
-document.querySelectorAll('.service-icon-wrapper, .feature-icon-wrapper').forEach(wrapper => {
-    const icon = wrapper.querySelector('.service-icon, .feature-icon');
-    
-    wrapper.addEventListener('mouseenter', () => {
-        icon.style.transition = 'transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-        icon.style.transform = 'rotate(360deg) scale(1.1)';
-    });
-    
-    wrapper.addEventListener('mouseleave', () => {
-        icon.style.transform = 'rotate(0deg) scale(1)';
     });
 });
 

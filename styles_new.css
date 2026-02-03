@@ -426,7 +426,6 @@ section {
 
 .service-item:hover {
     background: rgba(43, 111, 237, 0.02);
-    transform: translateY(-5px);
 }
 
 .service-icon-wrapper {
@@ -444,7 +443,6 @@ section {
 .service-item:hover .service-icon-wrapper {
     background: rgba(43, 111, 237, 0.15);
     border-color: rgba(43, 111, 237, 0.3);
-    transform: scale(1.05) rotate(5deg);
 }
 
 .service-icon {
@@ -501,7 +499,6 @@ section {
 
 .feature-item:hover {
     background: rgba(43, 111, 237, 0.02);
-    transform: translateY(-5px);
 }
 
 .feature-icon-wrapper {
@@ -519,7 +516,6 @@ section {
 .feature-item:hover .feature-icon-wrapper {
     background: rgba(0, 217, 255, 0.15);
     border-color: rgba(0, 217, 255, 0.3);
-    transform: scale(1.05) rotate(-5deg);
 }
 
 .feature-icon {
